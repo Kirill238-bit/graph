@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import style from './graph.module.scss'
 import {
   Chart as ChartJS,
@@ -27,15 +27,7 @@ export default function Graph({data}){
   const [half_year,setHalf_year]=useState(false);
   const [month,setMonth]=useState(true);
   const [selectedValue, setSelectedValue] = useState("")
-  //const dataMonth=[data.graph.month];
-  //for(let i=1;i<=31;i++){
-  //  if(i<5||i%5===0){
-  //    for(let j=0;j<5;j++){
-  //      dataMonth.push(Object.values(data.graph.month[i]));
-  //    }
-  //  }
-  //}
-  //console.log(dataMonth)
+
   useMemo(()=>{
     if(selectedValue==='month'){
       setMonth(true);
